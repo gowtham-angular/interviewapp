@@ -1,0 +1,15 @@
+/* material-form.component.css */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+    margin: 20px;
+  }
+  
+  .unsaved-changes-alert {
+    color: red;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  

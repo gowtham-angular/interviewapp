@@ -1,0 +1,23 @@
+<mat-tab-group>
+    <mat-tab label="TS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetTs }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetHTML }}</code></pre>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="CSS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetCSS }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="Output">
+        <div *ngIf="error" class="error">
+            {{ error }}
+        </div>
+    </mat-tab>
+</mat-tab-group>

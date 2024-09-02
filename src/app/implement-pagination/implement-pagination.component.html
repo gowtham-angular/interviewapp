@@ -1,0 +1,32 @@
+<mat-tab-group>
+    <mat-tab label="TS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetTs }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetHTML }}</code></pre>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="CSS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetCSS }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="Output">
+        <div class="pagination-container">
+            <button mat-button color="primary" (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">
+              <mat-icon>chevron_left</mat-icon> Previous
+            </button>
+            
+            <span>{{ currentPage }} / {{ totalPages }}</span>
+            
+            <button mat-button color="primary" (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">
+              Next <mat-icon>chevron_right</mat-icon>
+            </button>
+          </div>
+          
+    </mat-tab>
+</mat-tab-group>

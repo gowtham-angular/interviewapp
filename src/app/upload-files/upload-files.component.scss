@@ -1,0 +1,17 @@
+/* file-upload.component.css */
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .file-upload-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .file-upload-container li {
+    margin: 5px 0;
+  }
+  

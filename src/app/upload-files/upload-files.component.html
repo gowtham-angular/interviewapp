@@ -1,0 +1,41 @@
+<mat-tab-group>
+    <mat-tab label="TS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetTs }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetHTML }}</code></pre>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="CSS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetCSS }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="Output">
+        <!-- file-upload.component.html -->
+        <div class="file-upload-container">
+            <input #fileInput type="file" multiple (change)="onFileSelected($event)" hidden />
+            <button mat-raised-button color="primary" (click)="fileInput.click()">
+                Select Files
+            </button>
+
+            <div *ngIf="selectedFilesArray.length > 0">
+                <h3>Selected Files</h3>
+                <ul>
+                    <li *ngFor="let file of selectedFilesArray">
+                        {{ file.name }} ({{ file.size | fileSizePipe }})
+                    </li>
+                </ul>
+            </div>
+
+            <button mat-raised-button color="accent" (click)="onUpload()" [disabled]="selectedFilesArray.length === 0">
+                Upload Files
+            </button>
+        </div>
+
+    </mat-tab>
+</mat-tab-group>

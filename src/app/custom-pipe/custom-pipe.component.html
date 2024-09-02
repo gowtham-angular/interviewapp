@@ -1,0 +1,22 @@
+<mat-tab-group>
+    <mat-tab label="TS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetTs }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetHTML }}</code></pre>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="CSS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetCSS }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="Output">
+        Transformed value from '2023-12-25'
+        <p>{{ '2023-12-25' | customDate }}</p>
+    </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,29 @@
+<mat-tab-group>
+    <mat-tab label="TS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetTs }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetHTML }}</code></pre>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="CSS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetCSS }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="Output" >
+        <mat-card  style="margin: 20px;" appearance="outlined" [ngClass]="{ 'hidden-content': !isVisible }" [appToggleVisibility]="isVisible"s class="content-card">
+            <mat-card-content>
+              This content will be shown or hidden based on the isVisible property.
+            </mat-card-content>
+          </mat-card>
+          
+          <button mat-raised-button color="primary" (click)="isVisible = !isVisible">
+            Toggle Visibility
+          </button>
+    </mat-tab>
+</mat-tab-group>

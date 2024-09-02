@@ -1,0 +1,11 @@
+.sampleForm{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+    .actualForm{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}

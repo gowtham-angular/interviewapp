@@ -1,0 +1,49 @@
+mat-toolbar {
+  background-color: #004f4f;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 65px);
+
+  .sidenav-container {
+    .sidenav {
+      width: 350px;
+      padding: 16px 8px;
+      overflow-y: auto;
+      .sidenav-actual-container {
+        border-right: 1px solid #3f4948;
+        padding: 0px 8px;
+      }
+    }
+
+    .content {
+      padding: 20px;
+      width: calc(100vw - 390px);
+    }
+  }
+}
+
+.active {
+  background: #00dddd26;
+
+  span {
+    color: #5effff;
+  }
+}
+
+.card-content {
+  text-align: center;
+  font-size: 24px;
+  color: #5effff;
+  
+}
+
+.work-area {
+  padding: 10px 2px;
+}

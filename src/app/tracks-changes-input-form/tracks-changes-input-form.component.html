@@ -1,0 +1,47 @@
+<mat-tab-group>
+    <mat-tab label="TS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetTs }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetHTML }}</code></pre>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="CSS">
+        <div>
+            <pre><code appHighlight="typescript">{{ codeSnippetCSS }}</code></pre>
+        </div>
+    </mat-tab>
+    <mat-tab label="Output">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput type="text" formControlName="name">
+              <mat-error *ngIf="form.get('name')?.hasError('required')">
+                Name is required.
+              </mat-error>
+            </mat-form-field>
+          
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" formControlName="email">
+              <mat-error *ngIf="form.get('email')?.hasError('required')">
+                Email is required.
+              </mat-error>
+              <mat-error *ngIf="form.get('email')?.hasError('email')">
+                Please enter a valid email address.
+              </mat-error>
+            </mat-form-field>
+          
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+          </form>
+          
+          <div *ngIf="hasUnsavedChanges" class="unsaved-changes-alert">
+            You have unsaved changes!
+          </div>
+          
+    </mat-tab>
+</mat-tab-group>
